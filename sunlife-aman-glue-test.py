@@ -24,4 +24,3 @@ glueContext.write_dynamic_frame.from_options(frame = datasource0,
           connection_type = "s3",
           connection_options = {"path": "s3://sunlife-cybersec-test/output-dir/legislator_history"},
           format = "json")
-job.commit()
