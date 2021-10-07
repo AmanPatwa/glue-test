@@ -44,6 +44,12 @@ def get_glue_job(fun_name):
     )
     return response
 
+def run_glue_job(fun_name):
+    response = glue_client.start_job_run(
+    JobName=fun_name,
+    )
+    return response
+
 def handler():
     name1 = os.environ['name1']
     file_name = name1.split(' ')
@@ -74,11 +80,17 @@ def handler():
                     print("Updating boto3 job")
                     response = update_glue_job(base_func_name)
                     print(response)
+                    if response:
+                        print("Running glue job")
+                        run_glue_job(base_func_name)
             except Exception as e:
                 print("Glue job not present")
                 print("Creating a new glue job")
                 response = create_glue_job(base_func_name)
                 print(response)
+                if response:
+                    print("Running glue job")
+                    run_glue_job(base_func_name)
 
 
             
