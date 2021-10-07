@@ -13,10 +13,10 @@ phases:
       # - git fetch
       # - test=$(git diff --name-only $CODEBUILD_RESOLVED_SOURCE_VERSION^)
       # - echo $test
-      - git clone https://yashodhan_khadilkar@bitbucket.org/yashodhan_khadilkar/aman-lambda.git 
+      - git clone https://github.com/AmanPatwa/glue-test.git
       - ls
       # - NAME=$(git diff --name-only HEAD^)
-      - cd aman-lambda
+      - cd glue-test
       - name=$(git diff --name-only HEAD^)
       - name=$(echo $name)
       - echo $name
