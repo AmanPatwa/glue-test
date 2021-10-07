@@ -14,7 +14,7 @@ def create_glue_job(fun_name):
         },
         Command={
             'Name': 'glueetl',
-            'ScriptLocation': 'string',
+            'ScriptLocation': 's3://sunlife-cybersec-test/Glue/'+fun_name+'.py',
             'PythonVersion': '3'
         },
         
@@ -31,7 +31,7 @@ def update_glue_job(fun_name):
             },
             'Command': {
                 'Name': 'glueetl',
-                'ScriptLocation': 'string',
+                'ScriptLocation': 's3://sunlife-cybersec-test/Glue/'+fun_name+'.py',
                 'PythonVersion': '3'
             }
         }
