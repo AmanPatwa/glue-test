@@ -46,7 +46,7 @@ def get_glue_job(fun_name):
 
 def run_glue_job(fun_name):
     response = glue_client.start_job_run(
-    JobName=fun_name,
+        JobName=fun_name,
     )
     return response
 
@@ -82,7 +82,8 @@ def handler():
                     print(response)
                     if response:
                         print("Running glue job")
-                        run_glue_job(base_func_name)
+                        res1 = run_glue_job(base_func_name)
+                        print(res1)
             except Exception as e:
                 print("Glue job not present")
                 print("Creating a new glue job")
@@ -90,7 +91,8 @@ def handler():
                 print(response)
                 if response:
                     print("Running glue job")
-                    run_glue_job(base_func_name)
+                    res1 = run_glue_job(base_func_name)
+                    print(res1)
 
 
             
