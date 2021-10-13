@@ -82,8 +82,8 @@ def handler():
                     print(response)
                     if response:
                         print("Running glue job")
-                        res1 = run_glue_job(base_func_name)
-                        print(res1)
+                        # res1 = run_glue_job(base_func_name)
+                        # print(res1)
             except Exception as e:
                 print("Glue job not present")
                 print("Creating a new glue job")
@@ -91,8 +91,8 @@ def handler():
                 print(response)
                 if response:
                     print("Running glue job")
-                    res1 = run_glue_job(base_func_name)
-                    print(res1)
+                    # res1 = run_glue_job(base_func_name)
+                    # print(res1)
 
 
             
