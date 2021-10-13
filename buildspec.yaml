@@ -18,7 +18,7 @@ phases:
       - tar xvf spark-3.1.2-bin-hadoop3.2.tgz
       - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop3.2
       - export PATH=$PATH:$SPARK_HOME/bin
-      - export PYSPARK_PYTHON=/usr/bin/python3
+      - export PYSPARK_PYTHON=python3
       - pip install pyspark
   build:
     commands:
@@ -26,10 +26,13 @@ phases:
       # - git fetch
       # - test=$(git diff --name-only $CODEBUILD_RESOLVED_SOURCE_VERSION^)
       # - echo $test
+      - cd ~
+      - pwd
       - git clone https://github.com/AmanPatwa/glue-test.git
       - ls
       # - NAME=$(git diff --name-only HEAD^)
       - cd glue-test
+      - ls
       - spark-submit sunlife-aman-glue-test.py
       - name=$(git diff --name-only HEAD^)
       - name=$(echo $name)
