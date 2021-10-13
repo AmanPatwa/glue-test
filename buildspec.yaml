@@ -8,10 +8,12 @@ phases:
     runtime-versions:
       python: 3.9
     commands:
+      - pwd
       - java --version
       - which python
       - mkdir -p /opt/spark
       - cd /opt/spark
+      - pwd
       - wget https://dlcdn.apache.org/spark/spark-3.1.2/spark-3.1.2-bin-hadoop3.2.tgz
       - tar xvf spark-3.1.2-bin-hadoop3.2.tgz
       - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop3.2
@@ -28,6 +30,7 @@ phases:
       - ls
       # - NAME=$(git diff --name-only HEAD^)
       - cd glue-test
+      - spark-submit sunlife-aman-glue-test.py
       - name=$(git diff --name-only HEAD^)
       - name=$(echo $name)
       - echo $name
