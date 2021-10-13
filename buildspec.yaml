@@ -9,6 +9,15 @@ phases:
       python: 3.9
     commands:
       - java --version
+      - which python
+      - mkdir -p /opt/spark
+      - cd /opt/spark
+      - wget https://dlcdn.apache.org/spark/spark-3.1.2/spark-3.1.2-bin-hadoop3.2.tgz
+      - tar xvf spark-3.1.2-bin-hadoop3.2.tgz
+      - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop3.2
+      - export PATH=$PATH:$SPARK_HOME/bin
+      - export PYSPARK_PYTHON=/usr/bin/python3
+      - pip install pyspark
   build:
     commands:
       # - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
