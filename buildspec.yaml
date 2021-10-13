@@ -20,6 +20,7 @@ phases:
       - export PATH=$PATH:$SPARK_HOME/bin
       - export PYSPARK_PYTHON=python3
       - pip install pyspark
+      - pip install fake-awsglue
   build:
     commands:
       # - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
