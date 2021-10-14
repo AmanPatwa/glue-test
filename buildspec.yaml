@@ -17,7 +17,6 @@ phases:
       - ls -al
       - which python
       - java --version
-      - scala --version
       - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop2.7
       - export PATH=$PATH:$SPARK_HOME/bin
       - export PYSPARK_PYTHON=$(which python)
