@@ -25,7 +25,7 @@ phases:
       - export PYSPARK_PYTHON=$(which python)
       # - export JAVA_HOME=$(which java)
       - pip install pytest
-      - pip install pyspark
+      # - pip install pyspark
       - pip install awsglue-local
       - pip install pandas
     # commands:
@@ -56,7 +56,7 @@ phases:
       - 
       # - ./aws-glue-libs/bin/gluesparksubmit glue-test/sunlife-aman-glue-test.py
       # - pytest
-      # - spark-submit sunlife-aman-glue-test.py
+      - spark-submit --jars /usr/lib/spark/lib/datanucleus-api-jdo-3.2.6.jar,/usr/lib/spark/lib/datanucleus-core-3.2.10.jar,/usr/lib/spark/lib/datanucleus-rdbms-3.2.9.jar sunlife-aman-glue-test.py
       - pytest
       - name=$(git diff --name-only HEAD^)
       - name=$(echo $name)
