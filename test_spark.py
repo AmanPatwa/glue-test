@@ -35,7 +35,7 @@ def test_filter_spark_data_frame_by_value():
         ['age', 'name'],
     )
 
-    Equality assertion
+    # Equality assertion
     pd.testing.assert_frame_equal(
         expected_output,
         real_output,
