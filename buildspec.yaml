@@ -5,17 +5,16 @@ exported-variables:
   - CODEBUILD_RESOLVED_SOURCE_VERSION
 phases:
   install:
-    runtime-versions:
-      python: 3.9
+    # runtime-versions:
+    #   python: 3.9
     commands:
       - pwd
-      - java --version
-      - which python
       - mkdir -p /opt/spark
       - cd /opt/spark
       - pwd
       - wget https://dlcdn.apache.org/spark/spark-3.1.2/spark-3.1.2-bin-hadoop3.2.tgz
       - tar xvf spark-3.1.2-bin-hadoop3.2.tgz
+      - which python
       - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop3.2
       - export PATH=$PATH:$SPARK_HOME/bin
       - export PYSPARK_PYTHON=$(which python)
