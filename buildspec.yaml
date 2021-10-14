@@ -13,7 +13,7 @@ phases:
       - cd /opt/spark
       - pwd
       - wget https://dlcdn.apache.org/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz
-      - tar xvf spark-3.0.3-bin-hadoop2.7
+      - tar xvf spark-3.0.3-bin-hadoop2.7.tgz
       - ls -al
       - which python
       - which java
