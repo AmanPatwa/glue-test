@@ -56,7 +56,7 @@ phases:
       - 
       # - ./aws-glue-libs/bin/gluesparksubmit glue-test/sunlife-aman-glue-test.py
       # - pytest
-      - spark-submit sunlife-aman-glue-test.py
+      # - spark-submit sunlife-aman-glue-test.py
       - pytest
       - name=$(git diff --name-only HEAD^)
       - name=$(echo $name)
