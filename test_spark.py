@@ -1,8 +1,8 @@
 from pyspark import SparkContext
-from sunlife-aman-glue-test import filter_spark_data_frame 
+import importlib
 from pyspark.sql import SQLContext
 import pandas as pd
-
+my_mod = importlib.import_module('sunlife-aman-glue-test')
 
 def test_filter_spark_data_frame_by_value():
     # Spark Context initialisation
@@ -25,7 +25,7 @@ def test_filter_spark_data_frame_by_value():
          ('nick', 40)],
         ['name', 'age'],
     )
-    real_output = filter_spark_data_frame(input)
+    real_output = my_mod.filter_spark_data_frame(input)
     real_output = get_sorted_data_frame(
         real_output.toPandas(),
         ['age', 'name'],
@@ -35,7 +35,7 @@ def test_filter_spark_data_frame_by_value():
         ['age', 'name'],
     )
 
-    # Equality assertion
+    Equality assertion
     pd.testing.assert_frame_equal(
         expected_output,
         real_output,

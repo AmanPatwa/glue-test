@@ -24,6 +24,7 @@ phases:
       - export PATH=$PATH:$SPARK_HOME/bin::$SPARK_HOME/sbin
       - export PYSPARK_PYTHON=$(which python)
       - pip install pytest
+      - pip install pandas
     # commands:
     #   - git clone https://github.com/awslabs/aws-glue-libs.git
     #   - wget https://aws-glue-etl-artifacts.s3.amazonaws.com/glue-common/apache-maven-3.6.0-bin.tar.gz
