@@ -25,7 +25,6 @@ glueContext.write_dynamic_frame.from_options(frame = datasource0,
           connection_options = {"path": "s3://sunlife-cybersec-test/output-dir/legislator_history"},
           format = "json")
 
-
 # from pyspark import SparkContext
 # from pyspark.sql import HiveContext
 
