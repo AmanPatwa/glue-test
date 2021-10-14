@@ -20,6 +20,9 @@ phases:
       - java --version
       # - export JAVA_HOME=$(which java)
       - cd ~
+      - $USER
+      - export TEST=$(pwd)/aman
+      - $TEST
       - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop2.7 
       - export PATH=$PATH:$SPARK_HOME/bin::$SPARK_HOME/sbin
       - export PYSPARK_PYTHON=$(which python)
@@ -37,29 +40,29 @@ phases:
     #   - export SPARK_HOME=$(pwd)/spark-2.4.3-bin-spark-3.1.1-amzn-0-bin-3.2.1-amzn-3
     #   - $SPARK_HOME
     #   - pip install pyspark
-  build:
-    commands:
-      # - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
-      # - git fetch
-      # - test=$(git diff --name-only $CODEBUILD_RESOLVED_SOURCE_VERSION^)
-      # - echo $test
-      # - cd ~
-      - ls -al
-      - pwd
-      - git clone https://github.com/AmanPatwa/glue-test.git
-      - ls
-      # - NAME=$(git diff --name-only HEAD^)
-      - cd glue-test
-      - ls
-      # - cd aws-glue-libs
-      # - ./bin/gluesparksubmit glue-test/sunlife-aman-glue-test.py
-      # - spark-submit sunlife-aman-glue-test.py
-      - pytest
-      - name=$(git diff --name-only HEAD^)
-      - name=$(echo $name)
-      - echo $name
-      - name1=$name
-      - export name1
+  # build:
+  #   commands:
+  #     # - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+  #     # - git fetch
+  #     # - test=$(git diff --name-only $CODEBUILD_RESOLVED_SOURCE_VERSION^)
+  #     # - echo $test
+  #     # - cd ~
+  #     - ls -al
+  #     - pwd
+  #     - git clone https://github.com/AmanPatwa/glue-test.git
+  #     - ls
+  #     # - NAME=$(git diff --name-only HEAD^)
+  #     - cd glue-test
+  #     - ls
+  #     # - cd aws-glue-libs
+  #     # - ./bin/gluesparksubmit glue-test/sunlife-aman-glue-test.py
+  #     # - spark-submit sunlife-aman-glue-test.py
+  #     - pytest
+  #     - name=$(git diff --name-only HEAD^)
+  #     - name=$(echo $name)
+  #     - echo $name
+  #     - name1=$name
+  #     - export name1
 #   post_build:
 #     commands:
 #       - python --version
