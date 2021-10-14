@@ -18,7 +18,7 @@ phases:
       - which python
       - which java
       - java --version
-      - export JAVA_HOME=$(which java)
+      # - export JAVA_HOME=$(which java)
       - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop2.7
       - export PATH=$PATH:$SPARK_HOME/bin
       - export PYSPARK_PYTHON=$(which python)
@@ -31,6 +31,7 @@ phases:
       # - echo $test
       - cd ~
       - ls -al
+      - cat .bashrc
       - pwd
       - git clone https://github.com/AmanPatwa/glue-test.git
       - ls
