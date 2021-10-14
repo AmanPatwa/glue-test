@@ -19,7 +19,6 @@ phases:
       - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop3.2
       - export PATH=$PATH:$SPARK_HOME/bin
       - export PYSPARK_PYTHON=/usr/bin/python3
-      - cat .bashrc
       - pip install awsglue-local
   build:
     commands:
