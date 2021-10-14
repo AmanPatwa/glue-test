@@ -19,9 +19,10 @@ phases:
       - which java
       - java --version
       # - export JAVA_HOME=$(which java)
-      - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop2.7
-      - export PATH=$PATH:$SPARK_HOME/bin
-      - export PYSPARK_PYTHON=$(which python)
+      - cd ~
+      - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop2.7 >> .bashrc
+      - export PATH=$PATH:$SPARK_HOME/bin >> .bashrc
+      - export PYSPARK_PYTHON=$(which python) >> .bashrc
       - pip install awsglue-local
   build:
     commands:
@@ -32,6 +33,7 @@ phases:
       - cd ~
       - ls -al
       - cat .bashrc
+      - source ~/.bashrc
       - pwd
       - git clone https://github.com/AmanPatwa/glue-test.git
       - ls
