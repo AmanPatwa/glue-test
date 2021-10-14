@@ -37,7 +37,7 @@ phases:
       - wget https://aws-glue-etl-artifacts.s3.amazonaws.com/glue-3.0/spark-3.1.1-amzn-0-bin-3.2.1-amzn-3.tgz
       - tar xvf spark-3.1.1-amzn-0-bin-3.2.1-amzn-3.tgz
       - ls
-      - export SPARK_HOME=$(pwd)/spark-2.4.3-bin-spark-3.1.1-amzn-0-bin-3.2.1-amzn-3
+      - export SPARK_HOME=$(pwd)/spark-3.1.1-amzn-0-bin-3.2.1-amzn-3
       - $SPARK_HOME
       - pip install awsglue-local
       - pip install pytest
