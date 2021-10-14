@@ -9,6 +9,7 @@ phases:
       python: 3.7
     commands:
       - pwd
+      - apt install scala -y
       - mkdir -p /opt/spark
       - cd /opt/spark
       - pwd
@@ -29,6 +30,7 @@ phases:
       # - test=$(git diff --name-only $CODEBUILD_RESOLVED_SOURCE_VERSION^)
       # - echo $test
       - cd ~
+      - ls -al
       - pwd
       - git clone https://github.com/AmanPatwa/glue-test.git
       - ls
