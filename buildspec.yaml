@@ -5,8 +5,8 @@ exported-variables:
   - CODEBUILD_RESOLVED_SOURCE_VERSION
 phases:
   install:
-    # runtime-versions:
-    #   python: 3.9
+    runtime-versions:
+      python: 3.7
     commands:
       - pwd
       - mkdir -p /opt/spark
