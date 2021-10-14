@@ -16,7 +16,9 @@ phases:
       - tar xvf spark-3.1.2-bin-hadoop2.7.tgz
       - ls -al
       - which python
+      - which java
       - java --version
+      - export JAVA_HOME=$(which java)
       - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop2.7
       - export PATH=$PATH:$SPARK_HOME/bin
       - export PYSPARK_PYTHON=$(which python)
