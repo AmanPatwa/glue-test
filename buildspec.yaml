@@ -23,7 +23,8 @@ phases:
       - export SPARK_HOME=/opt/spark/spark-3.1.2-bin-hadoop2.7 
       - export PATH=$PATH:$SPARK_HOME/bin::$SPARK_HOME/sbin
       - export PYSPARK_PYTHON=$(which python)
-      - pip install pytest,pyspark
+      - pip install pytest
+      - pip install pyspark
       - pip install pandas
     # commands:
     #   - git clone https://github.com/awslabs/aws-glue-libs.git
