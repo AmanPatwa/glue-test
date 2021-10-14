@@ -20,10 +20,10 @@ datasource0.printSchema()
 # ## @return: datasink2
 # ## @inputs: [frame = applymapping1]
 # datasink2 = glueContext.write_dynamic_frame.from_options(frame = applymapping1, connection_type = "s3", connection_options = {"path": args['outpath']}, format = "json", transformation_ctx = "datasink2")
-glueContext.write_dynamic_frame.from_options(frame = datasource0,
-          connection_type = "s3",
-          connection_options = {"path": "s3://sunlife-cybersec-test/output-dir/legislator_history"},
-          format = "json")
+# glueContext.write_dynamic_frame.from_options(frame = datasource0,
+#           connection_type = "s3",
+#           connection_options = {"path": "s3://sunlife-cybersec-test/output-dir/legislator_history"},
+#           format = "json")
 
 # # from pyspark import SparkContext
 # # from pyspark.sql import HiveContext
