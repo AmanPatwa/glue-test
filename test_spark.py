@@ -1,13 +1,23 @@
-from pyspark import SparkContext
-import importlib
+# from pyspark import SparkContext
 from pyspark.sql import SQLContext
+import importlib
 import pandas as pd
 my_mod = importlib.import_module('sunlife-aman-glue-test')
+
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
 
 def test_filter_spark_data_frame_by_value():
     # Spark Context initialisation
     spark_context = SparkContext()
     sql_context = SQLContext(spark_context)
+   
+# from awsglue.job import Job
+
+    glueContext = GlueContext(SparkContext.getOrCreate())
+
+    datasource0 = glueContext.create_dynamic_frame.from_catalog(database = 'dbcrawler', table_name = 'sunlife-cyber-sec-testtestset_json')
+
 
     # Input and output dataframes
     input = sql_context.createDataFrame(
