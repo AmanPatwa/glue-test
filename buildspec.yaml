@@ -26,6 +26,7 @@ phases:
       # - export JAVA_HOME=$(which java)
       - pip install pytest
       - pip install pyspark
+      - pip install awsglue-local
       - pip install pandas
     # commands:
     #   - git clone https://github.com/awslabs/aws-glue-libs.git
