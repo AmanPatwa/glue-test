@@ -15,7 +15,7 @@ phases:
       - pwd
       - wget https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7.tgz
       # - wget https://dlcdn.apache.org/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz
-      - tar xvf spark-2.4.7-bin-hadoop2.7.tgz
+      - tar xvf spark-2.4.8-bin-hadoop2.7.tgz
       - ls -al
       - which python
       - which java
