@@ -6,7 +6,7 @@ exported-variables:
 phases:
   install:
     runtime-versions:
-      python: 3.6
+      python: 3.7
       java: corretto8
     commands:
       - pwd
