@@ -6,13 +6,14 @@ exported-variables:
 phases:
   install:
     runtime-versions:
-      python: 3.7
+      python: 3.6
+      java: corretto8
     commands:
       - pwd
       - mkdir -p /opt/spark
       - cd /opt/spark
       - pwd
-      - wget https://archive.apache.org/dist/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tgz
+      - wget https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7.tgz
       # - wget https://dlcdn.apache.org/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz
       - tar xvf spark-2.4.7-bin-hadoop2.7.tgz
       - ls -al
@@ -21,10 +22,11 @@ phases:
       - java --version
       # - export JAVA_HOME=$(which java)
       - cd ~
-      - export SPARK_HOME=/opt/spark/spark-2.4.7-bin-hadoop2.7 
+      - export SPARK_HOME=/opt/spark/spark-2.4.8-bin-hadoop2.7 
       - export PATH=$PATH:$SPARK_HOME/bin::$SPARK_HOME/sbin
       - export PYSPARK_PYTHON=$(which python)
       - export PYSPARK_DRIVER_PYTHON=$(which python)
+      - echo $SPARK_HOME
       # - export JAVA_HOME=$(which java)
       - pip install pytest
       # - pip install pyspark
