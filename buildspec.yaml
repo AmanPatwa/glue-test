@@ -55,7 +55,7 @@ phases:
       - export SPARK_HOME=/root/spark-3.1.1-amzn-0-bin-3.2.1-amzn-3
       - export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
       - export PYSPARK_PYTHON=$(which python)
-      - pip install awsglue-local
+      # - pip install awsglue-local
       - pip install pytest
       - pip install pandas
   build:
