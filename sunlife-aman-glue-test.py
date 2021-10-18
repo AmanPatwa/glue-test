@@ -5,7 +5,7 @@ from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.dynamicframe import DynamicFrame
 # from awsglue.job import Job
-sys.path.append("/root/.cache/pip/wheels/")
+sys.path.append("/root/aws-glue-libs/")
 print(sys.path)
 print(os.environ)
 sc=SparkContext() 
