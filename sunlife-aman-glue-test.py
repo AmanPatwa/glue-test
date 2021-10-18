@@ -10,7 +10,7 @@ from awsglue.context import GlueContext
 # sc=SparkContext() 
 # sc.getConf().getAll()
 # print(sc.getConf().getAll())
-glueContext = GlueContext(SparkContext.getOrCreate())
+# glueContext = GlueContext(SparkContext.getOrCreate())
 
 
 # datasource0 = glueContext.create_dynamic_frame.from_catalog(database = 'dbcrawler', table_name = 'sunlife-cyber-sec-testtestset_json')
