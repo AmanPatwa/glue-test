@@ -8,8 +8,8 @@ from pyspark.context import SparkContext
 
 def test_filter_spark_data_frame_by_value():
     # Spark Context initialisation
-    # spark_context = SparkContext()
-    # sql_context = SQLContext(spark_context)
+    spark_context = SparkContext()
+    sql_context = SQLContext(spark_context)
    
 # from awsglue.job import Job
 
