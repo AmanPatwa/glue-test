@@ -74,7 +74,7 @@ phases:
       - ls
       - 
       # - ./aws-glue-libs/bin/gluesparksubmit glue-test/sunlife-aman-glue-test.py
-      - ../aws-glue-libs/bin/gluepytest test_spark.py
+      # - ../aws-glue-libs/bin/gluepytest test_spark.py
       # - spark-submit sunlife-aman-glue-test.py
       # - pytest
       - name=$(git diff --name-only HEAD^)
@@ -82,12 +82,12 @@ phases:
       - echo $name
       - name1=$name
       - export name1
-#   post_build:
-#     commands:
-#       - python --version
-#       # - pip install aws_logging_handlers
-#       - python test.py
-# artifacts:
-#   type: zip
-#   files:
-#     - '**/*'
+  post_build:
+    commands:
+      # - python --version
+      # - pip install aws_logging_handlers
+      - python test.py
+artifacts:
+  type: zip
+  files:
+    - '**/*'

@@ -44,6 +44,7 @@ sql_context = SQLContext(spark_context)
 
 from pyspark.sql.functions import col
 
+
 def filter_spark_data_frame(
     dataframe,
     column_name='age',
