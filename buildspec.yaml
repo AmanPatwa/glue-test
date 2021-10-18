@@ -70,11 +70,11 @@ phases:
       - git clone https://github.com/AmanPatwa/glue-test.git
       - ls
       # - NAME=$(git diff --name-only HEAD^)
-      # - cd glue-test
+      - cd glue-test
       - ls
       - 
       # - ./aws-glue-libs/bin/gluesparksubmit glue-test/sunlife-aman-glue-test.py
-      - ./aws-glue-libs/bin/gluepytest glue-test/test_spark.py
+      - ../aws-glue-libs/bin/gluepytest test_spark.py
       # - spark-submit sunlife-aman-glue-test.py
       # - pytest
       - name=$(git diff --name-only HEAD^)

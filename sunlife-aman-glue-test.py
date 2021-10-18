@@ -3,6 +3,7 @@ import sys,os
 # from awsglue.utils import getResolvedOptions
 from pyspark.context import SparkContext
 from awsglue.context import GlueContext
+from pyspark.sql import SQLContext
 # from awsglue.job import Job
 # sys.path.append("/root/aws-glue-libs/")
 # print(sys.path)
@@ -38,6 +39,8 @@ from awsglue.context import GlueContext
 # SQLContext.setConf("spark.sql.hive.convertMetastoreOrc", "false")
 # txt = SQLContext.sql( "SELECT 1")
 # txt.show(2000000, False)
+spark_context = SparkContext()
+sql_context = SQLContext(spark_context)
 
 from pyspark.sql.functions import col
 
