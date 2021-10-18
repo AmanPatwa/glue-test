@@ -8,8 +8,8 @@ from pyspark.context import SparkContext
 
 def test_filter_spark_data_frame_by_value():
     # Spark Context initialisation
-    spark_context = SparkContext()
-    sql_context = SQLContext(spark_context)
+    # spark_context = SparkContext()
+    # sql_context = SQLContext(spark_context)
    
 # from awsglue.job import Job
 
@@ -19,7 +19,7 @@ def test_filter_spark_data_frame_by_value():
 
 
     # Input and output dataframes
-    input = sql_context.createDataFrame(
+    input = my_mod.sql_context.createDataFrame(
         [('charly', 15),
          ('fabien', 18),
          ('sam', 21),
@@ -28,7 +28,7 @@ def test_filter_spark_data_frame_by_value():
          ('nick', 40)],
         ['name', 'age'],
     )
-    expected_output = sql_context.createDataFrame(
+    expected_output = my_mod.sql_context.createDataFrame(
         [('sam', 25),
          ('sam', 21),
          ('nick', 40)],
@@ -52,7 +52,7 @@ def test_filter_spark_data_frame_by_value():
     )
 
     # Close the Spark Context
-    spark_context.stop()
+    my_mod.spark_context.stop()
 
 
 def get_sorted_data_frame(data_frame, columns_list):
