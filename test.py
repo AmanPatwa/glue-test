@@ -1,5 +1,6 @@
 import json, os
 import boto3, zipfile
+import subprocess
 s3_client = boto3.client('s3')
 glue_client = boto3.client('glue')
 
@@ -60,6 +61,17 @@ def handler():
             # fun_name = name.split('.')
             # fun_name = fun_name[0]
             # print(fun_name)
+            try:
+                print("Testing")
+                res = subprocess.run(["../aws-glue-libs/bin/gluepytest", "test_spark.py"])
+                print(res)
+                if res==0:
+                    print("Test Passed")
+                else:
+                    return False
+            except Exception as e:
+                print("Error in testing")
+                return
             try:
                 # zip_file = zipfile.ZipFile(fun_name+'.zip','w')
                 # zip_file.write(name,compress_type=zipfile.ZIP_DEFLATED)
