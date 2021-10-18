@@ -40,6 +40,7 @@ phases:
       - pip install awsglue-local
       # - pip install pyspark
       # - pip install py4j
+      - pip install pyGLUE
       - pip install pandas
     # commands:
     #   - git clone https://github.com/awslabs/aws-glue-libs.git
