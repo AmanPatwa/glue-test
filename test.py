@@ -65,12 +65,14 @@ def handler():
                 print("Testing")
                 res = subprocess.run(["../aws-glue-libs/bin/gluepytest", "test_spark.py"])
                 print(res)
-                if res==0:
+                print(res.returncode)
+                if res.returncode==0:
                     print("Test Passed")
                 else:
-                    return False
+                    print("Test Failed")
+                    raise Exception("Test Failed")
             except Exception as e:
-                print("Error in testing")
+                print("Error in testing",e)
                 return
             try:
                 # zip_file = zipfile.ZipFile(fun_name+'.zip','w')
