@@ -22,10 +22,13 @@ phases:
       - java -version
       # - export JAVA_HOME=$(which java)
       - cd ~
+      - echo $JAVA_HOME
       - export SPARK_HOME=/opt/spark/spark-2.4.7-bin-hadoop2.7 
-      - export PATH=$PATH:$SPARK_HOME/bin::$SPARK_HOME/sbin
+      - export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+      - export PATH=$PATH:$SPARK_HOME
       - export PYSPARK_PYTHON=$(which python)
       - export PYSPARK_DRIVER_PYTHON=$(which python)
+      - export PATH=$PATH:$JAVA_HOME
       - echo $SPARK_HOME
       # - export JAVA_HOME=$(which java)
       - pip install pytest
