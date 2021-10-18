@@ -73,7 +73,7 @@ phases:
       # - cd glue-test
       - ls
       - 
-      - ./aws-glue-libs/bin/gluesparksubmit glue-test/sunlife-aman-glue-test.py
+      # - ./aws-glue-libs/bin/gluesparksubmit glue-test/sunlife-aman-glue-test.py
       - ./aws-glue-libs/bin/gluepytest glue-test/test_spark.py
       # - spark-submit sunlife-aman-glue-test.py
       # - pytest
