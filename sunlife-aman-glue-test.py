@@ -6,6 +6,9 @@ from awsglue.context import GlueContext
 from awsglue.dynamicframe import DynamicFrame
 # from awsglue.job import Job
 
+sc=SparkContext() 
+sc.getConf().getAll()
+print(sc.getConf().getAll())
 glueContext = GlueContext(SparkContext.getOrCreate())
 
 
