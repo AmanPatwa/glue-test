@@ -36,4 +36,4 @@ RUN name=$(echo $name)
 RUN echo $name
 RUN name1=$name
 RUN export name1
-CMD python test.py
+RUN python test.py
