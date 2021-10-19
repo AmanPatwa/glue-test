@@ -36,4 +36,4 @@ RUN name=$(echo $name)
 RUN echo $name
 RUN name1=$name
 RUN export name1
-RUN python test.py
+RUN ../aws-glue-libs/bin/gluepytest test_spark.py
