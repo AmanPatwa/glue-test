@@ -49,7 +49,8 @@ phases:
       - docker --version
       - docker build -t glue-script .
       - cd ~
-      - docker run -itd --name glue-container glue-image
+      # - docker images
+      - docker run -itd --name glue-container glue-script
       # - git clone https://github.com/awslabs/aws-glue-libs.git
       # - wget https://aws-glue-etl-artifacts.s3.amazonaws.com/glue-common/apache-maven-3.6.0-bin.tar.gz
       # - tar xvf apache-maven-3.6.0-bin.tar.gz
