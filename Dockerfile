@@ -29,7 +29,7 @@ RUN pip install pandas
 RUN pip install boto3
 
 RUN git clone https://github.com/AmanPatwa/glue-test.git
-RUN cd glue-test && pwd
+WORKDIR glue-test
 RUN name=$(git diff --name-only HEAD^)
 RUN name=$(echo $name)
 RUN echo $name
