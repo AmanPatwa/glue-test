@@ -3,6 +3,8 @@ WORKDIR /root
 RUN apt-get update
 RUN apt-get install git -y
 RUN apt-get install wget -y
+RUN apt-get install openjdk-8-jdk -y
+RUN java -version
 RUN python -m pip install --upgrade pip
 # RUN apk add --no-cache wget
 # RUN apk add --no-cache git
@@ -27,6 +29,7 @@ RUN pip install awsglue-local
 RUN pip install pytest
 RUN pip install pandas
 RUN pip install boto3
+# RUN apt-get install openjdk-8-jdk
 
 RUN git clone https://github.com/AmanPatwa/glue-test.git
 WORKDIR /root/glue-test
