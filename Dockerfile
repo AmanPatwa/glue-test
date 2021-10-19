@@ -24,4 +24,4 @@ RUN export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 RUN pip install pyspark
 RUN pip install py4j
 RUN pip install pytest
-RUN pip install pandas
+# RUN pip install pandas

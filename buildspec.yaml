@@ -63,7 +63,7 @@ phases:
       - export PYSPARK_PYTHON=$(which python)
       # - pip install awsglue-local
       # - pip install pytest
-      # - pip install pandas
+      - pip install pandas
   build:
     commands:
       # - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
