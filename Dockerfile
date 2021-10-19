@@ -21,7 +21,7 @@ RUN export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 # RUN export PYSPARK_PYTHON=$(which python)
 
 # RUN pip install awsglue-local
-RUN pip install pyspark==2.4.8
-RUN pip install py4j==0.10.7
+RUN pip install pyspark
+RUN pip install py4j
 RUN pip install pytest
 RUN pip install pandas
