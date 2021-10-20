@@ -1,4 +1,4 @@
-FROM python:3.7-bullseye
+FROM python:3.7-buster
 WORKDIR /root
 RUN apt-get update
 RUN apt-get install git -y
@@ -29,7 +29,7 @@ RUN pip install awsglue-local
 RUN pip install pytest
 RUN pip install pandas
 RUN pip install boto3
-# RUN apt-get install openjdk-8-jdk
+#RUN apt-get install openjdk-8-jdk
 
 RUN git clone https://github.com/AmanPatwa/glue-test.git
 WORKDIR /root/glue-test

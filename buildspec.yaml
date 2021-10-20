@@ -5,9 +5,9 @@ exported-variables:
   - CODEBUILD_RESOLVED_SOURCE_VERSION
 phases:
   install:
-    runtime-versions:
-      python: 3.7
-      java: corretto8
+    # runtime-versions:
+    #   python: 3.7
+    #   java: corretto8
     # commands:
     #   - pwd
     #   - mkdir -p /opt/spark
