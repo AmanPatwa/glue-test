@@ -96,6 +96,7 @@ phases:
   #     # - python --version
   #     # - pip install aws_logging_handlers
       - python test.py
+      - docker ps
 artifacts:
   type: zip
   files:
