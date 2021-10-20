@@ -51,7 +51,7 @@ phases:
       - docker build -t glue-script .
       # - cd ~
       # - docker images
-      - docker run -itd --name glue-container glue-script
+      # - docker run -itd --name glue-container glue-script
       - docker ps
       # - git clone https://github.com/awslabs/aws-glue-libs.git
       # - wget https://aws-glue-etl-artifacts.s3.amazonaws.com/glue-common/apache-maven-3.6.0-bin.tar.gz
@@ -97,6 +97,8 @@ phases:
   #     # - pip install aws_logging_handlers
       - python test.py
       - docker ps
+      - docker stop $(docker ps -a -q)
+      - docker rm $(docker ps -a -q)
 artifacts:
   type: zip
   files:
