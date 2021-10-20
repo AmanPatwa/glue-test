@@ -1,16 +1,24 @@
-FROM openjdk:8-jre-buster
-# FROM python:3.7-buster
-RUN java -version
+# FROM openjdk:8-jre-buster
+FROM python:3.7-buster
+# RUN java -version
 WORKDIR /root
 RUN apt update
+# RUN apt -y install openjdk-8-jdk-headless
 RUN apt install git -y
 RUN apt install wget -y
+
+# RUN java -version
 # RUN apt-get install openjdk-8-jre -y
 RUN apt install software-properties-common -y
-RUN python3 --version
+RUN wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
+RUN add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+RUN apt update
+RUN apt install adoptopenjdk-8-hotspot
+RUN java -version
+# RUN python3 --version
 # RUN add-apt-repository ppa:deadsnakes/ppa
 # RUN apt install python3.7 -y
-RUN apt install python3-pip -y
+# RUN apt install python3-pip -y
 # RUN alias python=python3 
 # RUN apt-get update
 # RUN add-apt-repository ppa:webupd8team/java
@@ -20,9 +28,9 @@ RUN apt install python3-pip -y
 # RUN java -version
 # RUN python3 -m pip3 install --upgrade pip3
 # RUN python --version
-RUN pip3 install pytest
-RUN pip3 install awsglue-local
-RUN pip3 install pandas
+RUN pip install pytest
+RUN pip install awsglue-local
+RUN pip install pandas
 # RUN python3.7 -m pip install --upgrade pip
 # RUN apk add --no-cache wget
 # RUN apk add --no-cache git
@@ -46,7 +54,7 @@ RUN export PYSPARK_PYTHON=$(which python)
 # RUN pip install py4j
 # RUN python3.7 -m pip install pytest
 # RUN pip install pandas
-RUN pip3 install boto3
+RUN pip install boto3
 #RUN apt-get install openjdk-8-jdk
 
 RUN git clone https://github.com/AmanPatwa/glue-test.git
