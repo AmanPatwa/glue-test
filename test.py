@@ -63,7 +63,7 @@ def handler():
             # print(fun_name)
             try:
                 print("Testing")
-                res = subprocess.run(["../aws-glue-libs/bin/gluepytest", "test_spark.py"])
+                res = subprocess.run(["docker run -itd --name glue-demo glue-script", "test_spark.py"])
                 print(res)
                 print(res.returncode)
                 if res.returncode==0:

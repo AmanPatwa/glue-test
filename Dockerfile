@@ -65,4 +65,4 @@ WORKDIR /root/glue-test
 # RUN echo $name
 # RUN name1=$name
 # RUN export name1
-RUN ../aws-glue-libs/bin/gluepytest test_spark.py
+ENTRYPOINT ["../aws-glue-libs/bin/gluepytest"]
