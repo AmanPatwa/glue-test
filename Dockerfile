@@ -16,7 +16,7 @@ RUN apt-get install python3.7 -y
 # RUN apt-get install openjdk-8-jdk -y
 # RUN java -version
 RUN python3.7 --version
-RUN python3.7 -m pip install --upgrade pip
+# RUN python3.7 -m pip install --upgrade pip
 # RUN apk add --no-cache wget
 # RUN apk add --no-cache git
 # RUN apk add py3-pip
@@ -34,12 +34,12 @@ RUN export SPARK_HOME=/root/spark-3.1.1-amzn-0-bin-3.2.1-amzn-3
 RUN export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 RUN export PYSPARK_PYTHON=$(which python)
 
-RUN pip install awsglue-local
+RUN python3.7 -m pip install awsglue-local
 # RUN pip install pyspark
 # RUN pip install py4j
-RUN pip install pytest
-RUN pip install pandas
-RUN pip install boto3
+RUN python3.7 -m pip install pytest
+RUN python3.7 -m pip install pandas
+RUN python3.7 -m pip install boto3
 #RUN apt-get install openjdk-8-jdk
 
 RUN git clone https://github.com/AmanPatwa/glue-test.git
