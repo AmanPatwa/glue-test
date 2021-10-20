@@ -29,7 +29,7 @@ def test_filter_spark_data_frame_by_value():
         ['name', 'age'],
     )
     expected_output = my_mod.sql_context.createDataFrame(
-         [('sam', 25),
+         [('charly', 25),
          ('sam', 21),
          ('nick', 40)],
         ['name', 'age'],
