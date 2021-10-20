@@ -3,6 +3,8 @@ WORKDIR /root
 RUN apt-get update
 RUN apt-get install git -y
 RUN apt-get install wget -y
+RUN apt-get install software-properties-common -y
+RUN apt-get update
 RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update
 RUN apt-get install openjdk-8-jre -y

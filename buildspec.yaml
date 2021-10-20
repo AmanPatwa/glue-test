@@ -43,6 +43,7 @@ phases:
     #   - pip install pyGLUE
     #   - pip install pandas
     commands:
+      - pwd
       # - cd ~
       # - git clone https://github.com/AmanPatwa/glue-test.git
       # - cd glue-test
