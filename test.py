@@ -66,7 +66,7 @@ def handler():
                 # res = subprocess.run(["docker","run","-d","--name","glue-demo","glue-script","test_spark.py"])
                 res = os.system('docker run -i --name glue-demo glue-script test_spark.py')
                 print(res)
-                # print(res.returncode)
+                print(res.AssertionError)
                 # if res.returncode==0:
                 #     print("Test Passed")
                 # else:
