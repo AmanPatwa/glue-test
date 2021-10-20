@@ -2,15 +2,15 @@ FROM openjdk:8-jre-buster
 # FROM python:3.7-buster
 RUN java -version
 WORKDIR /root
-RUN apt-get update
-RUN apt-get install git -y
-RUN apt-get install wget -y
+RUN apt update
+RUN apt install git -y
+RUN apt install wget -y
 # RUN apt-get install openjdk-8-jre -y
-RUN apt-get install software-properties-common -y
+RUN apt install software-properties-common -y
 RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt-get install python3.7 -y
-RUN apt-get install python3-pip -y
-RUN apt-get install python-is-python3
+RUN apt install python3.7 -y
+RUN apt install python3-pip -y
+RUN apt install python-is-python3 -y
 # RUN apt-get update
 # RUN add-apt-repository ppa:webupd8team/java
 # RUN apt-get update
