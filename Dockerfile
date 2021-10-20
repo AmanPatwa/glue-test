@@ -9,6 +9,7 @@ RUN apt-get install wget -y
 RUN apt-get install software-properties-common -y
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get install python3.7 -y
+RUN apt-get install python3-pip -y
 # RUN apt-get update
 # RUN add-apt-repository ppa:webupd8team/java
 # RUN apt-get update
@@ -16,6 +17,7 @@ RUN apt-get install python3.7 -y
 # RUN apt-get install openjdk-8-jdk -y
 # RUN java -version
 RUN python3.7 --version
+RUN python3.7 -m pip install pytest
 # RUN python3.7 -m pip install --upgrade pip
 # RUN apk add --no-cache wget
 # RUN apk add --no-cache git
@@ -37,7 +39,7 @@ RUN export PYSPARK_PYTHON=$(which python)
 RUN python3.7 -m pip install awsglue-local
 # RUN pip install pyspark
 # RUN pip install py4j
-RUN python3.7 -m pip install pytest
+# RUN python3.7 -m pip install pytest
 RUN python3.7 -m pip install pandas
 RUN python3.7 -m pip install boto3
 #RUN apt-get install openjdk-8-jdk
