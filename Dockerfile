@@ -15,8 +15,8 @@ RUN apt-get install python3.7 -y
 # RUN apt-get install oracle-java8-installer
 # RUN apt-get install openjdk-8-jdk -y
 # RUN java -version
-RUN python --version
-RUN python -m pip install --upgrade pip
+RUN python3.7 --version
+RUN python3.7 -m pip install --upgrade pip
 # RUN apk add --no-cache wget
 # RUN apk add --no-cache git
 # RUN apk add py3-pip
