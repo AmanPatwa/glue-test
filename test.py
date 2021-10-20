@@ -64,24 +64,15 @@ def handler():
             try:
                 print("Testing")
                 # res = subprocess.check_output(["docker","run","-i","--name","glue-demo","glue-script","test_spark.py"])
-                res1 = subprocess.Popen(["docker","run","-i","glue-script","test_spark.py"],stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                res2 = os.system('docker run -i glue-script test_spark.py')
-                stdout, stderr = res1.communicate()
-                # print("===========RES=======",res)
-                # print("Type res",type(res))
-                print("========RES1=======",res1)
-                print("=============Output============")
-                print(stdout)
-                print("===========Error==========")
-                print(stderr)
-                print("=====RES2======",res2)
-                print(type(res1),type(res2))
-                # print(res.AssertionError)
-                # if res.returncode==0:
-                #     print("Test Passed")
-                # else:
-                #     print("Test Failed")
-                #     raise Exception("Test Failed")
+                # res1 = subprocess.Popen(["docker","run","-i","glue-script","test_spark.py"],stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                res = os.system('docker run -i glue-script test_spark.py')
+                # stdout, stderr = res1.communicate()
+                print("=====RESPONSE======",res)
+                if res==0:
+                    print("Test Passed")
+                else:
+                    print("Test Failed")
+                    raise Exception("Test Failed")
             except Exception as e:
                 print("Error in testing",e)
                 return
