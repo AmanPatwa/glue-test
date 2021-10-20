@@ -13,7 +13,7 @@ RUN apt install software-properties-common -y
 RUN wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
 RUN add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 RUN apt update
-RUN apt install adoptopenjdk-8-hotspot
+RUN apt install adoptopenjdk-8-hotspot -y
 RUN java -version
 # RUN python3 --version
 # RUN add-apt-repository ppa:deadsnakes/ppa
